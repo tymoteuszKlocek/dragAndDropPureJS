@@ -17,8 +17,8 @@ var imageProcessor = (function() {
             allowedFilesType = myConfig.allowedFilesType || defaultConfig.allowedFilesType,
             thHeight = myConfig.thHeight || defaultConfig.thHeight,
             thWidth = myConfig.thWidth || defaultConfig.thWidth,
-            dropBox = $(dropboxParam),
-            inputImg = $(inputimgParam);
+            dropBox = document.querySelector(dropboxParam),
+            inputImg = document.querySelector(inputimgParam);
 
         eventHandlerModule.atachEvent(inputImg, "change", handleMyFiles);
         eventHandlerModule.atachEvent(dropBox, "drop", hanadleDroppedFile);
@@ -90,14 +90,16 @@ var fileHandleModule = (function() {
     }
 
     function handleFiles(files, callback) {
+        var loadedFile;
         for (var i = 0; i < files.length; i++) {
             var file = files[i];
             var reader = new FileReader();
             reader.onload = function(e) {
-                var loadedFile = e.target.result;
+                loadedFile = e.target.result;
                 callback(loadedFile);
             };
             reader.readAsDataURL(file);
+            
         }
     }
 
