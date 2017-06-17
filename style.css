@@ -20,7 +20,7 @@ html {font-size:62.5%;}
 }
 
 body {
-    background-color: #CEF6F5;
+    /*background-color: #CEF6F5;*/
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
 }
@@ -32,11 +32,17 @@ body {
     width: 20rem;
     position: relative;
     margin: auto;
+
 }
 
 .preview {
     height: 20rem;
-    width: 90vw;
     margin: auto;
     margin-top: 2rem;
+}
+
+canvas {
+    display: inline-block;
+    z-index: 100;
+    margin: 5px;
 }

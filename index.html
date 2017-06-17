@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -9,17 +9,23 @@
     </head>
 
     <body>
-        <article>
+        <main>
             <p>Drag and drop your image into mouth!</p>
-            <div >
+            <div class="container">
                 <img class="dropbox" src="assets/mouth.png">
             </div><br><br>
-            <input type="file" class="inputImg" multiple accept=".jpg, .png"><hr>
+            <input type="file" class="inputImg" multiple accept=".jpg, .gif, .png"><hr>
             <h3>Preview:</h3>
-            <div class="preview"></div>
-        </article>
+            <div id="preview">
+                <!-- canvas go here -->
+            </div>
+        </main>
 
-        <script type="text/javascript" src="js/modules.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script src="system_js/system.js"></script>
+        <script>
+            System.config({ "baseURL": "es5" });
+            System.import("index.js");
+        </script>
+        
     </body>
 </html>
