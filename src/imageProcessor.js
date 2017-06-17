@@ -8,12 +8,10 @@ export const defaultConfig = {
     inputImg: ".inputImg",
     dropBox: ".dropbox"
 };
-
+//TODO change config
 export const myConfig = defaultConfig;
 
 export const init = (config) => {
-
-    console.log('consfig', myConfig);
 
     let dropBox = document.querySelector(myConfig.dropBox);
     let inputImg = document.querySelector(myConfig.inputImg);

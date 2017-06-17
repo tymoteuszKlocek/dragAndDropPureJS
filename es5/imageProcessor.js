@@ -27,8 +27,6 @@ System.register(['eventHandler.js', 'fileHandler.js'], function (_export, _conte
 
             _export('init', init = function init(config) {
 
-                console.log('consfig', myConfig);
-
                 var dropBox = document.querySelector(myConfig.dropBox);
                 var inputImg = document.querySelector(myConfig.inputImg);
 
